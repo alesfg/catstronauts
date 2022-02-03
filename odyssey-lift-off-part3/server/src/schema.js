@@ -29,6 +29,15 @@ const typeDefs = gql`
     modules: [Module!]!
   }
 
+  "Author of a complete Track or a Module"
+  type Author {
+    id: ID!
+    "Author's first and last name"
+    name: String!
+    "Author's profile picture"
+    photo: String
+  }
+
   "A Module is a single unit of teaching. Multiple Modules compose a Track"
   type Module {
     id: ID!
@@ -38,14 +47,6 @@ const typeDefs = gql`
     length: Int
   }
 
-  "Author of a complete Track or a Module"
-  type Author {
-    id: ID!
-    "Author's first and last name"
-    name: String!
-    "Author's profile picture"
-    photo: String
-  }
 `;
 
 module.exports = typeDefs;
